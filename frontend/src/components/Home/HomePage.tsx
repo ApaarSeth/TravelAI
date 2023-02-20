@@ -44,9 +44,9 @@ const HomePage = () => {
     };
 
     try {
-      await axios({
+      const data = await axios({
         // Endpoint to send files
-        url: "https://2215-2601-86-200-2-f439-2c71-c6b8-9ecb.ngrok.io/plan-trip",
+        url: `${process.env.NEXT_PUBLIC_NG_ROK}/plan-trip`,
         method: "POST",
         // Attaching the form data
         data: {
@@ -54,7 +54,7 @@ const HomePage = () => {
           days: daysRef.current!.value,
         },
       });
-      router.push("/planner");
+      router.push(`/planner/${data.data.job_id}`);
     } catch (error) {}
   };
 
