@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  reactStrictMode: false,
+  env: {
+    BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
+  }
 }
 
 module.exports = nextConfig
