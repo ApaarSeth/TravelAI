@@ -1,0 +1,13 @@
+.placesCorner {
+  margin: 0px;
+  width: 7.5px;
+  height: 7.5px;
+  left: -3px;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  background-color: #1daeef; /* to see where it is */
+}
+
+.vertical-border {
+  border-color: #1daeef;
+}

@@ -54,7 +54,7 @@ const HomePage = () => {
           days: daysRef.current!.value,
         },
       });
-      router.push(`/planner/${data.data.job_id}`);
+      router.push(`/planner/${data.data.id}`);
     } catch (error) {}
   };
 

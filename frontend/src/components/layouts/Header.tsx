@@ -23,7 +23,7 @@ const Header = () => {
         }}
         className="flex py-3 px-3"
       >
-        <h3 className="text-white text-base font-semibold">travelaja</h3>
+        <h3 className="text-white text-base font-semibold">Travel AI</h3>
         <nav>
           <section className="MOBILE-MENU flex md:hidden">
             <div
