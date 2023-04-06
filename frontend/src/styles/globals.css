@@ -1,12 +1,12 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 html,
 body {
   padding: 0;
   margin: 0;
-  }
+}
 
 a {
   color: inherit;
@@ -26,18 +26,53 @@ a {
   /* --background: #fff; */
   --main: #0d0106;
   --header: #2d3748;
-  --checkbox:rgb(76 156 10 / 26%);
+  --checkbox: rgb(76 156 10 / 26%);
 }
 
 input[type="checkbox"] {
   transform: scale(1.5);
 }
 
-input[type="checkbox"]:checked{
+input[type="checkbox"]:checked {
   accent-color: rgb(76 156 10 / 26%);
 }
 
-#__next{
+#__next {
   height: 100%;
 }
 
+input::-webkit-datetime-edit-month-field {
+  display: none;
+}
+input::-webkit-datetime-edit-day-field {
+  display: none;
+}
+input::-webkit-datetime-edit-year-field {
+  display: none;
+}
+input::-webkit-datetime-edit-text {
+  display: none;
+}
+
+input[type="date"]:before {
+  color: lightgrey;
+  content: attr(placeholder) !important;
+  margin-right: 0.5em;
+}
+
+.gm-style-iw-d {
+  overflow: unset !important;
+}
+
+button.gm-ui-hover-effect {
+  display: none !important;
+}
+
+.gm-style .gm-style-iw-c {
+  top: -40px;
+  padding: 0px !important;
+}
+
+.gm-style .gm-style-iw-tc::after {
+  top: -40px !important;
+}

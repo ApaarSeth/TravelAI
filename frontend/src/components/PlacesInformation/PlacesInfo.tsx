@@ -11,7 +11,7 @@ const PlacesInfo = ({ placeInfo }: any) => {
           style={{ position: "relative", paddingBottom: "20%" }}
         >
           <Image
-            src="/image.png"
+            src={placeInfo.icon || "/image.png"}
             alt="Picture of the author"
             layout="fill"
             objectFit="cover"

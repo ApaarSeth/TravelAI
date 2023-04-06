@@ -24,189 +24,59 @@ const DayPlanner = ({ locationId }: any) => {
           [
             {
               location: {
-                address:
-                  "1600 Amphitheatre Parkway, Mountain View, california.",
-                lat: 26.841706,
-                lng: 80.940006,
-                icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+                lat: 40.7616,
+                lng: -73.9776,
               },
-              name: "museum",
-              image: "",
-              description: "random data",
-              time: "30min",
+              icon: null,
+              name: "start",
+              description: " ",
+              time: "30 mins",
             },
             {
+              twitter: "https://twitter.com/empirestatebldg",
+              facebook: "https://www.facebook.com/empirestatebuilding",
+              instagram: "https://www.instagram.com/empirestatebldg/",
+              quora: "https://www.quora.com/topicEmpire-State-Building",
+              tripadvisor: "https://www.tripadvisor.com/104365",
               location: {
-                address:
-                  "1600 Amphitheatre Parkway, Mountain View, california.",
-                lat: 26.839658,
-                lng: 80.942838,
-                icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+                lat: 40.748333333333,
+                lng: -73.985277777778,
               },
-              name: "museum",
-              image: "",
-              description: "random data",
-              time: "30min",
+              icon: "https://upload.wikimedia.org/wikipedia/commons/1/10/Empire_State_Building_%28aerial_view%29.jpg",
+              name: "Empire State Building",
+              description: " ",
+              time: "30 mins",
             },
             {
+              twitter: "https://twitter.com/CentralParkNYC",
+              facebook: "https://www.facebook.com/centralparknyc",
+              instagram: null,
+              quora: null,
+              tripadvisor: "https://www.tripadvisor.com/105127",
               location: {
-                address:
-                  "1600 Amphitheatre Parkway, Mountain View, california.",
-                lat: 26.841706,
-                lng: 80.940006,
-                icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+                lat: 40.7825,
+                lng: -73.966111111111,
               },
-              name: "museum",
-              image: "",
-              description: "random data",
-              time: "30min",
+              icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Southwest_corner_of_Central_Park%2C_looking_east%2C_NYC.jpg",
+              name: "Central Park",
+              description: " ",
+              time: "30 mins",
             },
             {
+              twitter: "https://twitter.com/metmuseum",
+              facebook: "https://www.facebook.com/metmuseum",
+              instagram: "https://www.instagram.com/metmuseum/",
+              quora:
+                "https://www.quora.com/topicMetropolitan-Museum-of-Art-New-York",
+              tripadvisor: "https://www.tripadvisor.com/105125",
               location: {
-                address:
-                  "1600 Amphitheatre Parkway, Mountain View, california.",
-                lat: 26.839658,
-                lng: 80.942838,
-                icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+                lat: 40.779444444444444,
+                lng: -73.96333333333334,
               },
-              name: "museum",
-              image: "",
-              description: "random data",
-              time: "30min",
-            },
-            {
-              location: {
-                address:
-                  "1600 Amphitheatre Parkway, Mountain View, california.",
-                lat: 26.841706,
-                lng: 80.940006,
-                icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-              },
-              name: "museum",
-              image: "",
-              description: "random data",
-              time: "30min",
-            },
-            {
-              location: {
-                address:
-                  "1600 Amphitheatre Parkway, Mountain View, california.",
-                lat: 26.839658,
-                lng: 80.942838,
-                icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-              },
-              name: "museum",
-              image: "",
-              description: "random data",
-              time: "30min",
-            },
-            {
-              location: {
-                address:
-                  "1600 Amphitheatre Parkway, Mountain View, california.",
-                lat: 26.841706,
-                lng: 80.940006,
-                icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-              },
-              name: "museum",
-              image: "",
-              description: "random data",
-              time: "30min",
-            },
-            {
-              location: {
-                address:
-                  "1600 Amphitheatre Parkway, Mountain View, california.",
-                lat: 26.839658,
-                lng: 80.942838,
-                icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-              },
-              name: "museum",
-              image: "",
-              description: "random data",
-              time: "30min",
-            },
-            {
-              location: {
-                address:
-                  "1600 Amphitheatre Parkway, Mountain View, california.",
-                lat: 26.841706,
-                lng: 80.940006,
-                icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-              },
-              name: "museum",
-              image: "",
-              description: "random data",
-              time: "30min",
-            },
-            {
-              location: {
-                address:
-                  "1600 Amphitheatre Parkway, Mountain View, california.",
-                lat: 26.839658,
-                lng: 80.942838,
-                icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-              },
-              name: "museum",
-              image: "",
-              description: "random data",
-              time: "30min",
-            },
-          ],
-          [
-            {
-              location: {
-                address:
-                  "1600 Amphitheatre Parkway, Mountain View, california.",
-                lat: 33.42216,
-                lng: -118.08427,
-                icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-              },
-              name: "museum",
-              image: "",
-              description: "random data",
-              time: "30min",
-            },
-            {
-              location: {
-                address:
-                  "1600 Amphitheatre Parkway, Mountain View, california.",
-                lat: 34.42216,
-                lng: -119.08427,
-                icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-              },
-              name: "museum",
-              image: "",
-              description: "random data",
-              time: "30min",
-            },
-          ],
-          [
-            {
-              location: {
-                address:
-                  "1600 Amphitheatre Parkway, Mountain View, california.",
-                lat: 35.42216,
-                lng: -120.08427,
-                icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-              },
-              name: "museum",
-              image: "",
-              description: "random data",
-              time: "30min",
-            },
-            {
-              location: {
-                address:
-                  "1600 Amphitheatre Parkway, Mountain View, california.",
-                lat: 36.42216,
-                lng: -121.08427,
-                icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-              },
-              name: "museum",
-              image: "",
-              description: "random data",
-              time: "30min",
+              icon: "https://upload.wikimedia.org/wikipedia/commons/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg",
+              name: "Metropolitan Museum of Art",
+              description: " ",
+              time: "30 mins",
             },
           ],
         ];
