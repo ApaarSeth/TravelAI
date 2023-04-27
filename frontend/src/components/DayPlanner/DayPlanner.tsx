@@ -1,13 +1,16 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Map from "../Map/Map";
 import Button from "../Utility/Button";
-import axios from "axios";
 import PlacesList from "../PlacesInformation/PlacesList";
 
 const DayPlanner = ({ locationId }: any) => {
   const [plannerData, setPlannerData] = useState([]);
   const [dayData, setDayData] = useState([]);
   const daysRef = useRef(0);
+  const [hoverIndex, setHoverIndex] = useState(0);
+  const setInfoWIndowIndex = (index: number) => {
+    setHoverIndex(index);
+  };
   useEffect(() => {
     (async () => {
       try {
@@ -121,9 +124,18 @@ const DayPlanner = ({ locationId }: any) => {
         <h2 className="text-center text-blue-900 font-bold font-size text-5xl mt-16 mb-24">{`DAY ${daysRef.current}`}</h2>
       )}
       <div className="flex m-6">
-        {dayData?.[0]?.["location"] && <PlacesList placesArray={dayData} />}
         {dayData?.[0]?.["location"] && (
-          <Map className="w-1/2" placesArray={dayData} />
+          <PlacesList
+            setHoverIndex={setInfoWIndowIndex}
+            placesArray={dayData}
+          />
+        )}
+        {dayData?.[0]?.["location"] && (
+          <Map
+            hoverIndex={hoverIndex}
+            className="w-1/2"
+            placesArray={dayData}
+          />
         )}
       </div>
     </>

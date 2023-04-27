@@ -1,4 +1,4 @@
-input::-webkit-datetime-edit-month-field {
+/* input::-webkit-datetime-edit-month-field {
   color: blue;
 }
 input::-webkit-datetime-edit-day-field {
@@ -6,7 +6,7 @@ input::-webkit-datetime-edit-day-field {
 }
 input::-webkit-datetime-edit-year-field {
   color: purple;
-}
+} */
 
 .width-30 {
   width: 30%;

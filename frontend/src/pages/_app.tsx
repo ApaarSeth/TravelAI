@@ -4,7 +4,9 @@ import { NextPage } from "next";
 import type { AppProps } from "next/app";
 import { ReactNode } from "react";
 import { Poppins } from "@next/font/google";
-import Script from "next/script";
+import { LoaderContextProvider } from "../context/AppContext";
+import { WithAxios } from "@/components/Utility/axiosinstance";
+import { ModalContextProvider } from "@/context/ModalContext";
 type NextPageWithLayout = NextPage & {
   auth?: any;
   Layout?: ReactNode;
@@ -21,9 +23,15 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   return (
     <>
       <div className={poppins.className}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <ModalContextProvider>
+          <LoaderContextProvider>
+            <WithAxios>
+              <Layout>
+                <Component {...pageProps} />
+              </Layout>
+            </WithAxios>
+          </LoaderContextProvider>
+        </ModalContextProvider>
       </div>
     </>
   );

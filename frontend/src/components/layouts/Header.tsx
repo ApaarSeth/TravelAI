@@ -5,17 +5,18 @@ import styles from "./Header.module.css";
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
   const router = useRouter();
-
+  router.pathname.split("/")[1].length;
+  console.log(router);
   return (
     <div
       style={{
-        height: "50vh",
+        height: router.pathname.split("/")[1].length ? "20vh" : "50vh",
       }}
     >
       <div
         style={{
           zIndex: -1,
-          height: "50vh",
+          height: router.pathname.split("/")[1].length ? "20vh" : "50vh",
           background:
             "linear-gradient(0.9deg, rgba(248, 248, 248, 0) -44.03%, rgba(145, 144, 144, 0) -44.02%, rgba(0, 0, 0, 0.25) 17.92%), url('image.png')",
           backgroundSize: "cover",

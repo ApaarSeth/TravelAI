@@ -4,7 +4,7 @@ import { GetServerSideProps } from "next";
 import Link from "next/link";
 import { useState } from "react";
 
-const Tab = ({ isSelected, title, onClick, className }) => (
+const Tab = ({ isSelected, title, onClick, className }: any) => (
   <span
     onClick={onClick}
     className={
@@ -18,16 +18,16 @@ const Tab = ({ isSelected, title, onClick, className }) => (
   </span>
 );
 
-export default function Planner({ product }) {
+export default function Planner({ product }: any) {
   const { query } = useRouter();
-  const [selectedTab, setTab] = useState("Route");
+  const [selectedTab, setTab] = useState("Day by day");
   const tabs = ["Route", "Day by day", "Checklist", "Experiences"];
   const { id } = query;
   let component = null;
   switch (selectedTab) {
     case "Route":
       component = (
-        <h1 className="text-center text-lg font-bold">Chutiya banaya tumko</h1>
+        <h1 className="text-center text-lg font-bold">Coming Soon...</h1>
       );
       break;
     case "Day by day":
@@ -35,13 +35,13 @@ export default function Planner({ product }) {
       break;
     case "Checklist":
       component = (
-        <h1 className="text-center text-lg font-bold">Chutiya banaya tumko</h1>
+        <h1 className="text-center text-lg font-bold">Coming Soon...</h1>
       );
 
       break;
     case "Experiences":
       component = (
-        <h1 className="text-center text-lg font-bold">Chutiya banaya tumko</h1>
+        <h1 className="text-center text-lg font-bold">Coming Soon...</h1>
       );
 
       break;
@@ -74,7 +74,7 @@ export default function Planner({ product }) {
   );
 }
 
-export function getServerSideProps({ params }) {
+export function getServerSideProps({ params }: any) {
   return {
     props: {
       product: params.id,

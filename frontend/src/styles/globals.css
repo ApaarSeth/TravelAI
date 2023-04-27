@@ -41,25 +41,37 @@ input[type="checkbox"]:checked {
   height: 100%;
 }
 
-input::-webkit-datetime-edit-month-field {
-  display: none;
-}
-input::-webkit-datetime-edit-day-field {
-  display: none;
-}
-input::-webkit-datetime-edit-year-field {
-  display: none;
-}
-input::-webkit-datetime-edit-text {
+/* input::-webkit-datetime-edit-fields-wrapper {
   display: none;
 }
 
-input[type="date"]:before {
+input[type="date"]:focus::-webkit-datetime-edit-fields-wrapper {
+  display: inline-block !important;
+} */
+
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: auto;
+} */
+
+/* input[type="date"]:before {
+  height: 0px;
   color: lightgrey;
   content: attr(placeholder) !important;
   margin-right: 0.5em;
+  display: block;
 }
 
+input[type="date"]:focus:before {
+  content: "" !important;
+} */
+
+/* input[type="date"]:before:focus, */
 .gm-style-iw-d {
   overflow: unset !important;
 }
@@ -76,3 +88,46 @@ button.gm-ui-hover-effect {
 .gm-style .gm-style-iw-tc::after {
   top: -40px !important;
 }
+
+:root {
+  --element-animations-enabled: 0;
+}
+
+.calendarWrap {
+  display: inline-block;
+  position: relative;
+}
+
+.calendarElement {
+  border: 1px solid #ccc;
+  z-index: 999;
+  margin-bottom: 10px;
+}
+.rdrMonth {
+  padding: 0px !important;
+}
+
+.rdrMonthName {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.rdrMonthAndYearWrapper {
+  padding-bottom: 5px !important;
+  padding-top: 0px !important;
+  height: 40px !important;
+}
+input::placeholder {
+  /* white-space: pre-line;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); */
+  font-size: small;
+}
+/* #second::placeholder {
+  white-space:pre-line; 
+} */
+/* 
+input {
+  padding: 2rem 0;
+} */

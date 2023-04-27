@@ -3,8 +3,10 @@ import Button from "../Utility/Button";
 
 const PlacesInfo = ({ placeInfo }: any) => {
   return (
-    <div className="-mt-2">
-      <h4 className="underline underline-offset-1 pb-4">{placeInfo?.name}</h4>
+    <div>
+      <h4 className="underline underline-offset-1 pb-2 leading-none">
+        {placeInfo?.name}
+      </h4>
       <div className="flex mr-2">
         <div
           className="mr-2 w-1/4"

@@ -5,7 +5,7 @@ import {
   useJsApiLoader,
 } from "@react-google-maps/api";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { mapOptions } from "./MapConfig";
 import {
   BsFacebook,
@@ -21,11 +21,19 @@ const containerStyle = {
 
 // const center = useMemo(() => ({ lat: 18.52043, lng: 73.856743 }), []);
 
-const Map = ({ placesArray, nonce }: any) => {
+const Map = ({ hoverIndex, placesArray, nonce }: any) => {
   const [placeDetails, setPlaceDetails] = useState() as any;
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: `${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}`,
   });
+
+  useEffect(() => {
+    if (hoverIndex != null) {
+      setPlaceDetails(placesArray[hoverIndex]);
+    } else {
+      setPlaceDetails(null);
+    }
+  }, [hoverIndex]);
 
   const renderMap = (): JSX.Element => (
     <>

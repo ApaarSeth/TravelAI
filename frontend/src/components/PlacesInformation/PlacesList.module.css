@@ -1,13 +1,69 @@
-.placesCorner {
-  margin: 0px;
+.placesCorner::before {
+  content: "";
+  position: absolute;
+  display: block;
   width: 7.5px;
+  top: 5px;
   height: 7.5px;
-  left: -3px;
-  border-radius: 50%;
-  transform: rotate(45deg);
-  background-color: #1daeef; /* to see where it is */
+  left: -20px;
+  border-radius: 72%;
+  transform: rotate(-90deg);
+  background-color: #1daeef;
+}
+.vertical-border {
+  /* border-color: #1daeef; */
+  position: relative;
+  z-index: 1;
 }
 
-.vertical-border {
+.firstBorderCorner,
+.borderCorner {
+  border: 0.1em dashed;
   border-color: #1daeef;
+  border-right: none;
+  border-bottom: none;
+  border-top: none;
+  position: relative;
 }
+
+.firstBorderCorner::before,
+.borderCorner::before,
+.firstBorderCorner::after,
+.borderCorner::after {
+  content: "";
+  /* display: inline; */
+  position: absolute;
+  background: #fff;
+}
+
+.borderCorner::before {
+  top: -0.9em;
+  bottom: 0em;
+  left: 0em;
+  right: 0em;
+
+  /* top: -0.3em; 
+  bottom: 3em;
+  left: -0.4em;
+  right: 7.5em; */
+}
+
+.firstBorderCorner::before {
+  top: -1em;
+  bottom: 5.9em;
+  left: -1em;
+  right: 22em;
+}
+.lastBorderCorner::before {
+  top: 0.7em !important;
+  bottom: 0em !important;
+  left: -0.5em !important;
+  right: 22em !important;
+}
+/* .firstBorderCorner::after,
+.borderCorner::after {
+  left: 0em;
+  right: 1.5em;
+  top: 0em;
+  bottom: 0em;
+} */
